@@ -17,14 +17,23 @@ const Header = () => {
     }`}>
       <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          {/* Logo */}
+          {/* Enhanced Logo matching the professional IngeMove design */}
           <div className="flex items-center gap-3 group cursor-pointer">
-            <div className="h-12 w-12 rounded-2xl bg-gradient-primary flex items-center justify-center text-white font-bold text-lg shadow-brand transition-transform group-hover:scale-105">
-              IM
+            <div className="flex items-center">
+              {/* Logo with professional styling matching the brand */}
+              <div className="text-2xl font-bold">
+                <span className="text-primary">Inge</span>
+                <span className="text-secondary">Move</span>
+              </div>
+              {/* Arrow element matching the logo design */}
+              <div className="ml-1 text-secondary transform transition-transform group-hover:translate-x-1">
+                <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M14 7l5 5m0 0l-5 5m5-5H3" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </div>
             </div>
-            <div className="leading-tight">
-              <p className="font-bold text-xl text-text-primary">IngeMove</p>
-              <p className="text-sm text-text-muted">Ingénierie & Mobilité</p>
+            <div className="leading-tight ml-2">
+              <p className="text-sm text-text-muted font-medium">Ingénierie & Mobilité</p>
             </div>
           </div>
 

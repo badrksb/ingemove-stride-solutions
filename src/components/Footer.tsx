@@ -6,12 +6,20 @@ const Footer = () => {
           {/* Company Info */}
           <div className="md:col-span-2">
             <div className="flex items-center gap-3 mb-6">
-              <div className="h-12 w-12 rounded-2xl bg-gradient-secondary flex items-center justify-center text-white font-bold text-lg">
-                IM
+              {/* Enhanced Footer Logo matching the brand */}
+              <div className="flex items-center">
+                <div className="text-2xl font-bold">
+                  <span className="text-white">Inge</span>
+                  <span className="text-secondary">Move</span>
+                </div>
+                <div className="ml-1 text-secondary">
+                  <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M14 7l5 5m0 0l-5 5m5-5H3" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </div>
               </div>
-              <div>
-                <p className="font-bold text-xl">IngeMove</p>
-                <p className="text-gray-300">Ingénierie & Mobilité</p>
+              <div className="ml-2">
+                <p className="text-gray-300 text-sm">Ingénierie & Mobilité</p>
               </div>
             </div>
             <p className="text-gray-300 leading-relaxed mb-6 max-w-md">
