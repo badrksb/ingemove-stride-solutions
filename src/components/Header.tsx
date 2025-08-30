@@ -30,10 +30,38 @@ const Header = () => {
 
           {/* Navigation */}
           <nav className="hidden md:flex items-center gap-8">
-            <a href="#vtc" className="text-text-secondary font-medium animated-underline hover:text-primary transition-colors">
+            <a 
+              href="#vtc-services" 
+              onClick={(e) => {
+                e.preventDefault();
+                const element = document.getElementById('vtc-services');
+                if (element) {
+                  const event = new CustomEvent('activateVTCTab');
+                  window.dispatchEvent(event);
+                  setTimeout(() => {
+                    element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                  }, 100);
+                }
+              }}
+              className="text-text-secondary font-medium animated-underline hover:text-primary transition-colors"
+            >
               VTC Premium
             </a>
-            <a href="#engineering" className="text-text-secondary font-medium animated-underline hover:text-primary transition-colors">
+            <a 
+              href="#vtc-services" 
+              onClick={(e) => {
+                e.preventDefault();
+                const element = document.getElementById('vtc-services');
+                if (element) {
+                  const event = new CustomEvent('activateEngineeringTab');
+                  window.dispatchEvent(event);
+                  setTimeout(() => {
+                    element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                  }, 100);
+                }
+              }}
+              className="text-text-secondary font-medium animated-underline hover:text-primary transition-colors"
+            >
               Ingénierie
             </a>
             <a href="#testimonials" className="text-text-secondary font-medium animated-underline hover:text-primary transition-colors">

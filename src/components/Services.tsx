@@ -1,7 +1,26 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const Services = () => {
   const [activeTab, setActiveTab] = useState('vtc');
+
+  // Listen for tab activation events
+  useEffect(() => {
+    const handleActivateVTC = () => {
+      setActiveTab('vtc');
+    };
+
+    const handleActivateEngineering = () => {
+      setActiveTab('engineering');
+    };
+
+    window.addEventListener('activateVTCTab', handleActivateVTC);
+    window.addEventListener('activateEngineeringTab', handleActivateEngineering);
+    
+    return () => {
+      window.removeEventListener('activateVTCTab', handleActivateVTC);
+      window.removeEventListener('activateEngineeringTab', handleActivateEngineering);
+    };
+  }, []);
 
   const vtcServices = [
     {
@@ -70,7 +89,7 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="py-20 bg-surface">
+    <section id="vtc-services" className="py-20 bg-surface">
       <div className="max-w-7xl mx-auto px-6">
         {/* Section Header */}
         <div className="text-center mb-16">

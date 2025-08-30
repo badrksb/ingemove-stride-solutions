@@ -58,7 +58,23 @@ const Hero = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 mb-12">
-            <a href="#vtc" className="btn-secondary inline-flex items-center justify-center gap-2">
+            <a 
+              href="#vtc-services" 
+              onClick={(e) => {
+                e.preventDefault();
+                const element = document.getElementById('vtc-services');
+                if (element) {
+                  // Set VTC tab as active
+                  const event = new CustomEvent('activateVTCTab');
+                  window.dispatchEvent(event);
+                  // Smooth scroll to section
+                  setTimeout(() => {
+                    element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                  }, 100);
+                }
+              }}
+              className="btn-secondary inline-flex items-center justify-center gap-2"
+            >
               <span>Réserver un VTC</span>
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
@@ -108,7 +124,17 @@ const Hero = () => {
                 ].map((vehicle, index) => (
                   <div 
                     key={vehicle.name} 
-                    className="card-hover bg-surface-elevated rounded-2xl p-4 border border-border/50"
+                    onClick={() => {
+                      const element = document.getElementById('vtc-services');
+                      if (element) {
+                        const event = new CustomEvent('activateVTCTab');
+                        window.dispatchEvent(event);
+                        setTimeout(() => {
+                          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        }, 100);
+                      }
+                    }}
+                    className="card-hover bg-surface-elevated rounded-2xl p-4 border border-border/50 cursor-pointer"
                     style={{ animationDelay: `${index * 0.1}s` }}
                   >
                     <div className={`w-8 h-8 ${vehicle.color} rounded-lg mb-3 shadow-sm`}></div>
@@ -122,7 +148,21 @@ const Hero = () => {
               </div>
               
               <div className="mt-6 text-center">
-                <a href="#vtc" className="inline-flex items-center text-sm font-medium text-primary hover:text-primary-light transition-colors">
+                <a 
+                  href="#vtc-services" 
+                  onClick={(e) => {
+                    e.preventDefault();
+                    const element = document.getElementById('vtc-services');
+                    if (element) {
+                      const event = new CustomEvent('activateVTCTab');
+                      window.dispatchEvent(event);
+                      setTimeout(() => {
+                        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                      }, 100);
+                    }
+                  }}
+                  className="inline-flex items-center text-sm font-medium text-primary hover:text-primary-light transition-colors cursor-pointer"
+                >
                   Voir toute la flotte
                   <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
