@@ -24,7 +24,7 @@ const Hero = () => {
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-secondary/10 rounded-full blur-3xl float" style={{ animationDelay: '1s' }}></div>
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center py-20">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 grid lg:grid-cols-2 gap-8 lg:gap-16 items-center py-16 sm:py-20">
         {/* Content */}
         <div className="fade-in-up">
           <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-6">
@@ -32,13 +32,13 @@ const Hero = () => {
             Disponible 24/7
           </div>
           
-          <h1 className="text-5xl lg:text-6xl font-bold leading-tight mb-6">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight mb-6">
             <span className="gradient-text">Ingénierie d'Excellence</span>
             <br />
             <span className="text-text-primary">& Mobilité Professionnelle</span>
           </h1>
           
-          <p className="text-xl text-text-secondary leading-relaxed mb-8 max-w-2xl">
+          <p className="text-lg sm:text-xl text-text-secondary leading-relaxed mb-8 max-w-2xl">
             IngeMove combine expertise en ingénierie industrielle et services de transport premium pour accompagner vos projets et déplacements avec excellence.
           </p>
 
@@ -89,7 +89,7 @@ const Hero = () => {
           </div>
 
           {/* Trust indicators */}
-          <div className="flex items-center gap-8 text-sm text-text-muted">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-8 text-sm text-text-muted">
             <div className="flex items-center gap-2">
               <div className="w-3 h-3 bg-accent rounded-full"></div>
               <span>Certifié ISO 9001</span>
@@ -102,20 +102,20 @@ const Hero = () => {
         </div>
 
         {/* Enhanced Vehicle Showcase */}
-        <div className="relative fade-in-up" style={{ animationDelay: '0.2s' }}>
-          <div className="relative p-8">
+        <div className="relative fade-in-up mt-8 lg:mt-0" style={{ animationDelay: '0.2s' }}>
+          <div className="relative p-4 sm:p-8">
             {/* Background decoration */}
             <div className="absolute inset-0 bg-gradient-surface rounded-3xl shadow-xl transform rotate-1"></div>
             <div className="absolute inset-0 bg-gradient-surface rounded-3xl shadow-lg transform -rotate-1"></div>
             
             {/* Main content */}
-            <div className="relative bg-surface rounded-3xl p-8 shadow-xl border border-border/50">
+            <div className="relative bg-surface rounded-3xl p-4 sm:p-8 shadow-xl border border-border/50">
               <div className="text-center mb-6">
-                <h3 className="text-2xl font-bold text-text-primary mb-2">Notre Flotte Premium</h3>
-                <p className="text-text-muted">Véhicules récents et entretenus</p>
+                <h3 className="text-xl sm:text-2xl font-bold text-text-primary mb-2">Notre Flotte Premium</h3>
+                <p className="text-text-muted text-sm sm:text-base">Véhicules récents et entretenus</p>
               </div>
               
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                 {[
                   { name: 'Mercedes Classe E', category: 'Berline Executive', badge: 'Premium', color: 'bg-primary' },
                   { name: 'BMW Série 5', category: 'Business', badge: 'Confort', color: 'bg-secondary' },
@@ -134,13 +134,13 @@ const Hero = () => {
                         }, 100);
                       }
                     }}
-                    className="card-hover bg-surface-elevated rounded-2xl p-4 border border-border/50 cursor-pointer"
+                    className="card-hover bg-surface-elevated rounded-2xl p-3 sm:p-4 border border-border/50 cursor-pointer"
                     style={{ animationDelay: `${index * 0.1}s` }}
                   >
-                    <div className={`w-8 h-8 ${vehicle.color} rounded-lg mb-3 shadow-sm`}></div>
-                    <h4 className="font-semibold text-text-primary text-sm mb-1">{vehicle.name}</h4>
-                    <p className="text-xs text-text-muted mb-2">{vehicle.category}</p>
-                    <span className="inline-block px-2 py-1 text-xs font-medium bg-primary/10 text-primary rounded-full">
+                    <div className={`w-6 h-6 sm:w-8 sm:h-8 ${vehicle.color} rounded-lg mb-2 sm:mb-3 shadow-sm`}></div>
+                    <h4 className="font-semibold text-text-primary text-xs sm:text-sm mb-1">{vehicle.name}</h4>
+                    <p className="text-xs text-text-muted mb-1 sm:mb-2">{vehicle.category}</p>
+                    <span className="inline-block px-1.5 sm:px-2 py-0.5 sm:py-1 text-xs font-medium bg-primary/10 text-primary rounded-full">
                       {vehicle.badge}
                     </span>
                   </div>

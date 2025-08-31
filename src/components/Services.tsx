@@ -89,43 +89,43 @@ const Services = () => {
   ];
 
   return (
-    <section id="vtc-services" className="py-20 bg-surface">
-      <div className="max-w-7xl mx-auto px-6">
+    <section id="vtc-services" className="py-16 sm:py-20 bg-surface">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
         {/* Section Header */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-6">
             <span>Nos Expertises</span>
           </div>
-          <h2 className="text-4xl font-bold text-text-primary mb-4">
+          <h2 className="text-3xl sm:text-4xl font-bold text-text-primary mb-4">
             Deux métiers, une excellence
           </h2>
-          <p className="text-xl text-text-secondary max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl text-text-secondary max-w-3xl mx-auto">
             Découvrez nos services premium en transport VTC et consulting ingénierie
           </p>
         </div>
 
         {/* Tab Navigation */}
-        <div className="flex justify-center mb-12">
-          <div className="bg-surface-elevated rounded-2xl p-2 inline-flex">
+        <div className="flex justify-center mb-8 sm:mb-12">
+          <div className="bg-surface-elevated rounded-2xl p-1 sm:p-2 inline-flex flex-col sm:flex-row w-full max-w-lg sm:max-w-none">
             <button
               onClick={() => setActiveTab('vtc')}
-              className={`px-8 py-4 rounded-xl font-semibold transition-all ${
+              className={`px-4 sm:px-8 py-3 sm:py-4 rounded-xl font-semibold transition-all text-sm sm:text-base ${
                 activeTab === 'vtc'
                   ? 'bg-secondary text-white shadow-glow'
                   : 'text-text-secondary hover:text-text-primary'
               }`}
             >
-              🚗 Services VTC Premium
+              🚗 <span className="hidden sm:inline">Services </span>VTC Premium
             </button>
             <button
               onClick={() => setActiveTab('engineering')}
-              className={`px-8 py-4 rounded-xl font-semibold transition-all ${
+              className={`px-4 sm:px-8 py-3 sm:py-4 rounded-xl font-semibold transition-all text-sm sm:text-base mt-1 sm:mt-0 ${
                 activeTab === 'engineering'
                   ? 'bg-primary text-white shadow-brand'
                   : 'text-text-secondary hover:text-text-primary'
               }`}
             >
-              ⚙️ Consulting Ingénierie
+              ⚙️ <span className="hidden sm:inline">Consulting </span>Ingénierie
             </button>
           </div>
         </div>
@@ -133,16 +133,16 @@ const Services = () => {
         {/* VTC Services */}
         {activeTab === 'vtc' && (
           <div className="fade-in-up">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-8 sm:mb-12">
               {vtcServices.map((service, index) => (
                 <div 
                   key={service.name}
-                  className="card-hover bg-surface-elevated rounded-2xl p-6 border border-border/50"
+                  className="card-hover bg-surface-elevated rounded-2xl p-4 sm:p-6 border border-border/50"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
-                  <div className="text-4xl mb-4">{service.image}</div>
-                  <h3 className="text-xl font-bold text-text-primary mb-1">{service.name}</h3>
-                  <p className="text-secondary font-medium mb-4">{service.category}</p>
+                  <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">{service.image}</div>
+                  <h3 className="text-lg sm:text-xl font-bold text-text-primary mb-1">{service.name}</h3>
+                  <p className="text-secondary font-medium mb-3 sm:mb-4 text-sm sm:text-base">{service.category}</p>
                   
                   <div className="space-y-2 text-sm mb-4">
                     <div className="flex justify-between">
@@ -165,16 +165,16 @@ const Services = () => {
 
                   <div className="text-sm text-text-muted mb-4">{service.price}</div>
 
-                  <div className="flex gap-2">
-                    <button className="btn-secondary flex-1 text-sm py-2">Réserver</button>
-                    <button className="btn-outline text-sm py-2 px-4">Devis</button>
+                  <div className="flex flex-col sm:flex-row gap-2">
+                    <button className="btn-secondary flex-1 text-xs sm:text-sm py-2">Réserver</button>
+                    <button className="btn-outline text-xs sm:text-sm py-2 px-3 sm:px-4">Devis</button>
                   </div>
                 </div>
               ))}
             </div>
 
             {/* VTC Benefits */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
               {[
                 { title: 'Chauffeurs Professionnels', desc: 'Formés, uniformes, discrets' },
                 { title: 'Véhicules Premium', desc: 'Flotte récente, entretenue, assurée' },
@@ -195,11 +195,11 @@ const Services = () => {
         {/* Engineering Services */}
         {activeTab === 'engineering' && (
           <div className="fade-in-up">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 mb-8 sm:mb-12">
               {engineeringServices.map((service, index) => (
                 <div 
                   key={service.title}
-                  className="card-hover bg-surface-elevated rounded-2xl p-8 border border-border/50"
+                  className="card-hover bg-surface-elevated rounded-2xl p-4 sm:p-6 lg:p-8 border border-border/50"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
                   <div className="flex items-start gap-4">
@@ -207,8 +207,8 @@ const Services = () => {
                       {service.icon}
                     </div>
                     <div className="flex-1">
-                      <h3 className="text-xl font-bold text-text-primary mb-2">{service.title}</h3>
-                      <p className="text-text-secondary mb-4">{service.description}</p>
+                      <h3 className="text-lg sm:text-xl font-bold text-text-primary mb-2">{service.title}</h3>
+                      <p className="text-text-secondary mb-4 text-sm sm:text-base">{service.description}</p>
                       
                       <h4 className="font-semibold text-text-primary mb-2">Livrables clés:</h4>
                       <ul className="space-y-1">
@@ -226,16 +226,16 @@ const Services = () => {
             </div>
 
             {/* Engineering CTA */}
-            <div className="bg-gradient-primary rounded-3xl p-8 text-center text-white">
-              <h3 className="text-2xl font-bold mb-4">Besoin d'un accompagnement sur mesure ?</h3>
-              <p className="text-lg opacity-90 mb-6 max-w-2xl mx-auto">
+            <div className="bg-gradient-primary rounded-3xl p-6 sm:p-8 text-center text-white">
+              <h3 className="text-xl sm:text-2xl font-bold mb-4">Besoin d'un accompagnement sur mesure ?</h3>
+              <p className="text-base sm:text-lg opacity-90 mb-6 max-w-2xl mx-auto">
                 Nos consultants seniors vous accompagnent sur vos projets industriels avec une approche pragmatique et des résultats mesurables.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="#contact" className="btn-outline bg-white text-primary hover:bg-surface-hover">
+                <a href="#contact" className="btn-outline bg-white text-primary hover:bg-surface-hover text-sm sm:text-base">
                   Planifier un échange
                 </a>
-                <a href="#contact" className="btn-secondary">
+                <a href="#contact" className="btn-secondary text-sm sm:text-base">
                   Recevoir notre plaquette
                 </a>
               </div>
