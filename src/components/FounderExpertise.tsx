@@ -1,4 +1,4 @@
-import founderPhoto from '../assets/founder-photo-real.png';
+// Founder photo is now served from public folder
 
 const FounderExpertise = () => {
   return (
@@ -31,7 +31,7 @@ const FounderExpertise = () => {
                 <div className="aspect-square rounded-2xl overflow-hidden bg-gradient-to-br from-primary/20 to-secondary/20">
                   {/* Professional founder image */}
                   <img 
-                    src={founderPhoto} 
+                    src="/founder-photo-real.png" 
                     alt="Fondateur & CEO IngeMove - Expert en Ingénierie" 
                     className="w-full h-full object-cover"
                   />
