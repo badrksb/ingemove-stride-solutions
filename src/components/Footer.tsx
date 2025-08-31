@@ -43,28 +43,23 @@ const Footer = () => {
             <h4 className="font-semibold text-lg mb-6">Nos Services</h4>
             <ul className="space-y-3">
               <li>
-                <a href="#vtc" className="text-gray-300 hover:text-secondary transition-colors">
-                  VTC Premium
+                <a href="#services" className="text-gray-300 hover:text-secondary transition-colors">
+                  Services
                 </a>
               </li>
               <li>
-                <a href="#vtc" className="text-gray-300 hover:text-secondary transition-colors">
-                  Chauffeur privé
+                <a href="#fleet" className="text-gray-300 hover:text-secondary transition-colors">
+                  Flotte
                 </a>
               </li>
               <li>
-                <a href="#engineering" className="text-gray-300 hover:text-secondary transition-colors">
-                  Consulting Qualité
+                <a href="#consulting" className="text-gray-300 hover:text-secondary transition-colors">
+                  Ingénierie
                 </a>
               </li>
               <li>
-                <a href="#engineering" className="text-gray-300 hover:text-secondary transition-colors">
-                  Lean Manufacturing
-                </a>
-              </li>
-              <li>
-                <a href="#engineering" className="text-gray-300 hover:text-secondary transition-colors">
-                  Gestion de projet
+                <a href="#contact" className="text-gray-300 hover:text-secondary transition-colors">
+                  Contact
                 </a>
               </li>
             </ul>

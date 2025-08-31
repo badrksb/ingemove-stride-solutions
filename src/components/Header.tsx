@@ -40,42 +40,14 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-6 xl:gap-8">
-            <a 
-              href="#vtc-services" 
-              onClick={(e) => {
-                e.preventDefault();
-                const element = document.getElementById('vtc-services');
-                if (element) {
-                  const event = new CustomEvent('activateVTCTab');
-                  window.dispatchEvent(event);
-                  setTimeout(() => {
-                    element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                  }, 100);
-                }
-              }}
-              className="text-text-secondary font-medium animated-underline hover:text-primary transition-colors text-sm xl:text-base"
-            >
-              VTC Premium
+            <a href="#services" className="text-text-secondary font-medium animated-underline hover:text-primary transition-colors text-sm xl:text-base">
+              Services
             </a>
-            <a 
-              href="#vtc-services" 
-              onClick={(e) => {
-                e.preventDefault();
-                const element = document.getElementById('vtc-services');
-                if (element) {
-                  const event = new CustomEvent('activateEngineeringTab');
-                  window.dispatchEvent(event);
-                  setTimeout(() => {
-                    element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                  }, 100);
-                }
-              }}
-              className="text-text-secondary font-medium animated-underline hover:text-primary transition-colors text-sm xl:text-base"
-            >
-              Ingénierie
+            <a href="#fleet" className="text-text-secondary font-medium animated-underline hover:text-primary transition-colors text-sm xl:text-base">
+              Flotte
             </a>
             <a href="#testimonials" className="text-text-secondary font-medium animated-underline hover:text-primary transition-colors text-sm xl:text-base">
-              Références
+              Témoignages
             </a>
             <a href="#contact" className="text-text-secondary font-medium animated-underline hover:text-primary transition-colors text-sm xl:text-base">
               Contact
@@ -116,47 +88,25 @@ const Header = () => {
           <div className="lg:hidden mt-4 pb-4 border-t border-border/50">
             <nav className="flex flex-col space-y-4 pt-4">
               <a 
-                href="#vtc-services" 
-                onClick={(e) => {
-                  e.preventDefault();
-                  const element = document.getElementById('vtc-services');
-                  if (element) {
-                    const event = new CustomEvent('activateVTCTab');
-                    window.dispatchEvent(event);
-                    setTimeout(() => {
-                      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                    }, 100);
-                  }
-                  setIsMobileMenuOpen(false);
-                }}
+                href="#services" 
+                onClick={() => setIsMobileMenuOpen(false)}
                 className="text-text-primary font-medium py-2 px-4 rounded-lg hover:bg-surface-elevated transition-colors"
               >
-                🚗 VTC Premium
+                🚗 Services
               </a>
               <a 
-                href="#vtc-services" 
-                onClick={(e) => {
-                  e.preventDefault();
-                  const element = document.getElementById('vtc-services');
-                  if (element) {
-                    const event = new CustomEvent('activateEngineeringTab');
-                    window.dispatchEvent(event);
-                    setTimeout(() => {
-                      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                    }, 100);
-                  }
-                  setIsMobileMenuOpen(false);
-                }}
+                href="#fleet" 
+                onClick={() => setIsMobileMenuOpen(false)}
                 className="text-text-primary font-medium py-2 px-4 rounded-lg hover:bg-surface-elevated transition-colors"
               >
-                ⚙️ Ingénierie
+                🚙 Flotte
               </a>
               <a 
                 href="#testimonials" 
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="text-text-primary font-medium py-2 px-4 rounded-lg hover:bg-surface-elevated transition-colors"
               >
-                📋 Références
+                📋 Témoignages
               </a>
               <a 
                 href="#contact" 
