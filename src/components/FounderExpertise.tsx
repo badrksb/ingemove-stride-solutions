@@ -1,3 +1,5 @@
+import founderPhoto from '../assets/founder-photo-real.png';
+
 const FounderExpertise = () => {
   return (
     <section className="py-20 bg-gradient-to-br from-surface to-surface-elevated">
@@ -26,21 +28,21 @@ const FounderExpertise = () => {
               
               {/* Main image container */}
               <div className="relative bg-surface rounded-3xl p-8 shadow-xl border border-border/50">
-                <div className="aspect-square rounded-2xl bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center">
-                  {/* Professional founder image placeholder with IngeMove branding */}
-                  <div className="text-center">
-                    <div className="w-32 h-32 bg-gradient-primary rounded-full mx-auto mb-6 flex items-center justify-center text-white text-4xl font-bold shadow-brand">
-                      IM
-                    </div>
-                    <div className="bg-surface-elevated rounded-xl p-4 border border-border/50">
-                      <h3 className="text-xl font-bold text-text-primary mb-1">Fondateur & CEO</h3>
-                      <p className="text-primary font-medium">Expert Ingénierie</p>
-                      <div className="mt-3 text-sm text-text-muted">
-                        <p>• Ingénieur diplômé</p>
-                        <p>• 15+ ans d'expérience</p>
-                        <p>• Certifié Lean Six Sigma</p>
-                      </div>
-                    </div>
+                <div className="aspect-square rounded-2xl overflow-hidden bg-gradient-to-br from-primary/20 to-secondary/20">
+                  {/* Professional founder image */}
+                  <img 
+                    src={founderPhoto} 
+                    alt="Fondateur & CEO IngeMove - Expert en Ingénierie" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="mt-6 bg-surface-elevated rounded-xl p-4 border border-border/50">
+                  <h3 className="text-xl font-bold text-text-primary mb-1">Fondateur & CEO</h3>
+                  <p className="text-primary font-medium">Expert Ingénierie</p>
+                  <div className="mt-3 text-sm text-text-muted">
+                    <p>• Ingénieur diplômé</p>
+                    <p>• 15+ ans d'expérience</p>
+                    <p>• Certifié Lean Six Sigma</p>
                   </div>
                 </div>
               </div>
